@@ -4,5 +4,6 @@ public class Carro {
     String modelo;
     String cor;
     int anoFacricacao;
+    Pessoa proprietario;
 
 }
