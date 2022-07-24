@@ -4,7 +4,6 @@ public class Carro {
     String modelo;
     String cor;
     int anoFacricacao = 2022;
-    Pessoa proprietario;
-    boolean desligado;
+    Pessoa proprietario = new Pessoa();
 
 }
