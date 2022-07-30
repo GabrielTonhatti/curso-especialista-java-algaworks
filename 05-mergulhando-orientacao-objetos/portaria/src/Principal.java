@@ -1,12 +1,13 @@
 public class Principal {
 
     public static void main(String[] args) {
-        Visitante novoVisitante = new Visitante();
+        final var novoVisitante = new Visitante();
+
         novoVisitante.nome = "João";
         novoVisitante.idade = 15;
 
-        CadastroPortaria cadastroPortaria = new CadastroPortaria();
-        cadastroPortaria.cadastrar(novoVisitante, 2);
+        final var cadastroPortaria = new CadastroPortaria();
+        int codigoVisitante = cadastroPortaria.cadastrar(novoVisitante, 2);
     }
 
 }

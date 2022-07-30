@@ -10,10 +10,12 @@ public class CadastroPortaria {
 
     }
 
-    void cadastrar(final Visitante visitante, final int tempoExpiracaoEmMeses) {
-        final int tempoExpiracaoEmDias = tempoExpiracaoEmMeses * 30;
+    int cadastrar(final Visitante visitante, final int tempoExpiracaoEmMeses) {
+        final var tempoExpiracaoEmDias = tempoExpiracaoEmMeses * 30;
 
         System.out.printf("Visitante %s cadastrado para %d dias%n", visitante.nome, tempoExpiracaoEmDias);
+
+        return 1;
     }
 
 }
