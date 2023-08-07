@@ -8,11 +8,16 @@ public class Principal {
         produto.nome = "Água";
         produto.precoUnitario = 5;
 
-        carrinho.adicionarItem(produto, 4);
+        carrinho.adicionarItem(produto, -4);
 
-//        produto.alterarStatus(false);
-        produto.ativar();
-        produto.inativar();
+        Endereco endereco = new Endereco();
+        endereco.logradouro = "Rua das Amoras";
+        endereco.numero = "1000";
+        endereco.bairro = "Centro";
+
+        carrinho.gerarPedido();
+
+        System.out.println("Pedido gerado");
     }
 
 }
