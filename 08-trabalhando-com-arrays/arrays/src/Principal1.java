@@ -3,11 +3,18 @@ import java.util.Arrays;
 public class Principal1 {
 
     public static void main(String[] args) {
-        int[] numerosJogo1 = {25, 11, 8, 46, 37, 14};
-        int[] numerosJogo2 = Arrays.copyOf(numerosJogo1, numerosJogo1.length + 1);
-        numerosJogo2[numerosJogo2.length - 1] = 44;
+        int[] numerosJogoAtual = {25, 11, 8, 46, 37, 14, 55};
+        int[] numerosNovoJogo = new int[numerosJogoAtual.length - 1];
 
-        System.out.println(Arrays.toString(numerosJogo1));
-        System.out.println(Arrays.toString(numerosJogo2));
+        int indiceExclusao = 2;
+
+//        [25, 11, 8, 46, 37, 14, 55]
+//        [0, 0, 0, 0, 0, 0]
+
+        System.arraycopy(numerosJogoAtual, 0, numerosNovoJogo, 0, indiceExclusao);
+        System.arraycopy(numerosJogoAtual, indiceExclusao + 1, numerosNovoJogo, indiceExclusao, numerosNovoJogo.length - indiceExclusao);
+
+        System.out.println(Arrays.toString(numerosJogoAtual));
+        System.out.println(Arrays.toString(numerosNovoJogo));
     }
 }
