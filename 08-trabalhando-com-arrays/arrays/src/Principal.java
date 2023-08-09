@@ -1,13 +1,19 @@
-import java.util.Arrays;
-import java.util.Comparator;
-
 public class Principal {
 
     public static void main(String[] args) {
-        Integer[] notas = {8, 5, 4, 9, 10};
+        Turma turmaB = new Turma();
+        turmaB.identificacao = "Maternal B";
+        turmaB.nomeProfessora = "Tia Maria";
+        turmaB.alunos = new Aluno[3];
 
-        Arrays.sort(notas, Comparator.reverseOrder());
+        turmaB.alunos[0] = new Aluno();
+        turmaB.alunos[0].nome = "João";
+        turmaB.alunos[0].idade = 3;
 
-        System.out.println(Arrays.toString(notas));
+        Aluno aluno1 = new Aluno();
+        aluno1.nome = "Laura";
+        aluno1.idade = 4;
+
+        turmaB.alunos[1] = aluno1;
     }
 }
