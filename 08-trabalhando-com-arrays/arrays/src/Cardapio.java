@@ -20,4 +20,20 @@ public class Cardapio {
             }
         }
     }
+
+    ArrayList<ItemCardapio> consultarItensPorPreco(double precoMinimo, double precoMaximo) {
+        ArrayList<ItemCardapio> itensEncontrados = new ArrayList<>();
+
+        for (ItemCardapio item : itens) {
+            if (item.possuiPrecoEntre(precoMinimo, precoMaximo)) {
+                itensEncontrados.add(item);
+            }
+        }
+
+        // boa prática: retornar lista vazia
+        return itensEncontrados;
+
+        // má prática: retornar null
+//        return itensEncontrados.isEmpty() ? null : itensEncontrados;
+    }
 }

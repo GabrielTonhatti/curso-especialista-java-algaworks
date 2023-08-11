@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class ItemCardapio {
 
     String descricao;
@@ -10,4 +12,5 @@ public class ItemCardapio {
     void imprimir() {
         System.out.printf("%s x R$%.2f%n", descricao, preco);
     }
+
 }
