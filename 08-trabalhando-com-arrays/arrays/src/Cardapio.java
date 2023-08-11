@@ -19,8 +19,8 @@ public class Cardapio {
 
     void imprimirItensCardapio(double precoMinimo, double precoMaximo) {
         for (ItemCardapio item : itens) {
-            if (item.preco >= precoMinimo && item.preco <= precoMaximo) {
-                System.out.printf("%s - R$ %.2f\n", item.descricao, item.preco);
+            if (item.possuiPrecoEntre(precoMinimo, precoMaximo)) {
+                item.imprimir();
             }
         }
     }
