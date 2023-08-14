@@ -1,14 +1,17 @@
-public class Principal1 {
+import java.util.Arrays;
+import java.util.Objects;
+
+public class Principal {
 
     public static void main(String[] args) {
-        String[][] cidades = new String[3][3];
-        cidades[0][0] = "Uberlândia";
-        cidades[0][1] = "Uberaba";
-        cidades[0][2] = "Belo Horizonte";
+        System.out.println(Arrays.toString(args));
 
-        cidades[1][0] = "São Paulo";
-        cidades[1][1] = "Riberião Preto";
-
-        cidades[2][0] = "Fortaleza";
+        if (args.length <= 1) {
+            System.out.printf("Use: java %s [pt|en] [seu nome]", Principal.class.getName());
+        } else if (Objects.equals(args[0], "en")) {
+            System.out.printf("Hello, %s!%n", args[1]);
+        } else if (Objects.equals(args[0], "pt")) {
+            System.out.printf("Olá, %s!%n", args[1]);
+        }
     }
 }
