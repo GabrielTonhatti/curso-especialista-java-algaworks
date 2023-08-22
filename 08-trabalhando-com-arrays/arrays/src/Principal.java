@@ -1,17 +1,22 @@
-import java.util.Arrays;
-import java.util.Objects;
-
 public class Principal {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(args));
+        Fatura fatura = new Fatura();
+        fatura.numero = 123;
+        fatura.valorTotal = 1_293.55;
 
-        if (args.length <= 1) {
-            System.out.printf("Use: java %s [pt|en] [seu nome]", Principal.class.getName());
-        } else if (Objects.equals(args[0], "en")) {
-            System.out.printf("Hello, %s!%n", args[1]);
-        } else if (Objects.equals(args[0], "pt")) {
-            System.out.printf("Olá, %s!%n", args[1]);
-        }
+        ServicoCobranca servicoCobranca = new ServicoCobranca();
+
+//        String[] emailsCobranca = {"joao@algaworks.com", "maria@algaworks.com"};
+//        servicoCobranca.pagar(fatura, emailsCobranca);
+
+//        servicoCobranca.pagar(fatura, new String[]{"joao@algaworks.com", "maria@algaworks.com"});
+
+//        servicoCobranca.pagar(fatura, new String[0]);
+//        servicoCobranca.pagar(fatura, new String[]{});
+
+//        servicoCobranca.pagar(fatura, "joao@algaworks.com", "maria@algaworks.com");
+
+        servicoCobranca.pagar(fatura);
     }
 }
